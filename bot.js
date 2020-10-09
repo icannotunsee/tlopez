@@ -13,8 +13,8 @@ const music = new Music(client, {
     youtubeKey: process.env.BOT_YOUTUBE_TOKEN,
     prefix: PREFIX,
     ownerOverMember: true,
-    botOwner: '209728169131900928',
-    djRole:'GOD',
+    botOwner: '566279767544823808',
+    djRole:'eyes',
     maxQueueSize: "100",
     disableLoop: true,
 });
