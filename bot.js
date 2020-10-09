@@ -2,11 +2,6 @@ const Discord = require('discord.js');
 const Music = require('discord.js-musicbot-addon-v2');
 const client = new Discord.Client();
 
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setActivity('unsee content', { type: 'STREAMING' });
-});
-
 const PREFIX = process.env.PREFIX;
 
 const music = new Music(client, {
@@ -17,6 +12,12 @@ const music = new Music(client, {
     djRole:'eyes',
     maxQueueSize: "100",
     disableLoop: true,
+});
+
+
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+    client.user.setActivity('unsee content', { type: 'STREAMING' });
 });
 
 
