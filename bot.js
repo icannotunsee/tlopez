@@ -1,19 +1,5 @@
 const Discord = require('discord.js');
-const Music = require('discord.js-musicbot-addon-v2');
 const client = new Discord.Client();
-
-const PREFIX = process.env.PREFIX;
-
-const music = new Music(client, {
-    youtubeKey: process.env.BOT_YOUTUBE_TOKEN,
-    prefix: PREFIX,
-    ownerOverMember: true,
-    botOwner: '566279767544823808',
-    djRole:'eyes',
-    maxQueueSize: "100",
-    disableLoop: true,
-});
-
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
