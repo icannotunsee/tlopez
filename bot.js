@@ -12,7 +12,8 @@ client.on('ready', () => {
     if(message.content.startsWith('t!say') && message.guild.member(message.author).hasPermission("MANAGE_ROLES")) {
         message.delete()
         var saytext = args.join(" ");
-        client.channels.get("742073189605310483").send(saytext);
+        channel = client.channels.cache.get('742073189605310483');
+        channel.send(saytext);
     }
   });
 
