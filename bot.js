@@ -9,7 +9,7 @@ client.on('ready', () => {
 
   client.on('message', message => {
     const args = message.content.split(" ").slice(1);
-    if(message.content.startsWith('t!say') && message.guild.member(message.author).hasPermission("MANAGE_ROLES")) {
+    if(message.content.startsWith('t!say') && message.guild.member(message.author).hasPermission("MANAGE_CHANNELS")) {
         message.delete()
         var saytext = args.join(" ");
         channel = client.channels.cache.get('742073189605310483');
